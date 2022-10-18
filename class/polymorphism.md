@@ -6,10 +6,11 @@ C++ polymorphism means **one function with different implementions**. Concrete p
 
 What they have in common is to call a derived class's member functions via a base class pointer.
 
-- base class pointer: ` Enemy *e1 = &n;` The pointer is the base class pointer type and points to the object of the derived class.
+- base class pointer: 
+  ` Enemy *e1 = &n;` The pointer is the base class pointer type and points to the object of the derived class.
 - call a derived class's member functions:
-  In the way of identical behavior, `e1->setAttackPower(20)`, the function is inherited from base class.
-  In the way of different behavior, ``, the function's concrete implement is in derived class.
+  - In the way of identical behavior, `e1->setAttackPower(20)`, the function is inherited from base class.
+  - In the way of different behavior, ``, the function's concrete implement is in derived class.
 
 ### identical behaviors
 
