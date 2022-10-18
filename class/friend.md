@@ -23,4 +23,4 @@ void someFunc(MyClass &obj) {
 }
 ```
 
-PS: friend functions don't have a pointer.
+PS: friend functions don't have a pointer `this`.
