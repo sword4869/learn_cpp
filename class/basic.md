@@ -1,6 +1,15 @@
-# constructor and destructor
+- [1. constructor and destructor](#1-constructor-and-destructor)
+  - [1.1. constructor](#11-constructor)
+  - [1.2. destructor](#12-destructor)
+- [2. encapsulation](#2-encapsulation)
+- [3. header, source and main](#3-header-source-and-main)
+  - [3.1. Scope Resolution Operator](#31-scope-resolution-operator)
+  - [3.2. directive](#32-directive)
 
-## constructor
+
+# 1. constructor and destructor
+
+## 1.1. constructor
 
 The constructor's name is identical to that of the class. It has no return type, not even void.
 
@@ -10,12 +19,12 @@ public:
     MyClass(argument list);
 };
 
-MyClass:MyClass(argument list){
+MyClass::MyClass(argument list){
     cout<<"Constructor"<<endl;
 }
 ```
 
-## destructor
+## 1.2. destructor
 
 The destructor's name is identical to that of the class, only prefixed with a tilde (~). A destructor don't return a value or take any parameters.
 
@@ -25,7 +34,7 @@ public:
     ~MyClass();
 };
 
-MyClass:~MyClass(){
+MyClass::~MyClass(){
     cout<<"Destructor"<<endl;
 }
 ```
@@ -34,7 +43,7 @@ Since destructor can't take parameters, destructor also can't be overloaded. Eac
 
 Defining a destructor is not mandatory. If you don't need one, you don't have to define one.
 
-# encapsulation
+# 2. encapsulation
 
 We used encapsulation to hide the name attribute from the outside code. Then we provided access to it using public methods. Our class data can be read and modified only through those methods.
 
@@ -80,7 +89,7 @@ int main() {
 }
 ```
 
-# header, source and main
+# 3. header, source and main
 
 The header file (**MyClass.h**) holds the function declarations (prototypes) and variable declarations.
 
@@ -114,11 +123,11 @@ int main() {
 }
 ```
 
-## Scope Resolution Operator
+## 3.1. Scope Resolution Operator
 
 The double colon(`::`) in the source file (.cpp) is called the scope resolution operator, and it's used for the constructor definition.
 
-## directive
+## 3.2. directive
 
 - `ifndef` stands for "if not defined". The first pair of statements tells the program to define the MyClass header file if it has not been defined already.
 - `endif` ends the condition.

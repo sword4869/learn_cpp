@@ -1,14 +1,19 @@
+- [1. constructor](#1-constructor)
+  - [1.1. member initializer list](#11-member-initializer-list)
+- [2. forbid changes](#2-forbid-changes)
+- [3. const object call const function](#3-const-object-call-const-function)
+
 ```cpp
 const MyClass obj;
 ```
 
-# constructor
+# 1. constructor
 
 When you've used const to declare an object, you can't change its data members during the object's lifetime. But all const member variables must be initialized.
 
 So the const object(include member varialbes)'s initialization is done via **a parameterized and public constructor**. If no public default constructor is provided, a compiler error will occur.
 
-## member initializer list
+## 1.1. member initializer list
 
 C++ provides a handy syntax for initializing members of the class called the member initializer list (also called a constructor initializer).
 
@@ -50,7 +55,7 @@ private:
     int regVar;
     const int constVar;
 };
-MyClass:MyClass(int a, int b): regVar(a), constVar(b){
+MyClass::MyClass(int a, int b): regVar(a), constVar(b){
     cout << regVar << end;
     cout << constVar << end;
 }
@@ -58,11 +63,11 @@ MyClass:MyClass(int a, int b): regVar(a), constVar(b){
 
 PS: Even in cases in which member variables are not constant, it makes good sense to use the member initializer syntax.
 
-# forbid changes
+# 2. forbid changes
 
 Once a const class object has been initialized via the constructor, you cannot modify the object's member variables. **This includes both directly making changes to public member variables and calling member functions that set the value of member variables.**
 
-# const object call const function
+# 3. const object call const function
 
 A constant object can't call regular functions.
 Hence, for a constant object to work you need a constant function.

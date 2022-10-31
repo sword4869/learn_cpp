@@ -1,4 +1,7 @@
-# Normal
+- [1. Normal](#1-normal)
+- [2. Specialization](#2-specialization)
+
+# 1. Normal
 
 To create objects of the template class for different types, specify the data type in angle brackets, as we did when defining the function outside of the class.
 
@@ -27,7 +30,7 @@ int main() {
 }
 ```
 
-# Specialization
+# 2. Specialization
 
 Template specialization allows for the definition of a different implementation of a template when a specific type is passed as a template argument.
 
