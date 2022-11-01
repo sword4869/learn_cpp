@@ -12,7 +12,7 @@ int sum1(int a, int b){
     return a+b;
 }
 
-template <class T>
+template <typename T>
 T sum2(T a, T b){
     return a+b;
 }
@@ -30,7 +30,7 @@ int main() {
 #include <iostream>
 using namespace std;
 
-template <class T, class U>
+template <typename T, typename U>
 T smaller(T a, U b){
     return a>b?a:b;
 }
@@ -42,3 +42,5 @@ int main() {
     cout << smaller(3, 4.4) << endl;
 }
 ```
+
+`typename`和`class`在模板类和模板函数中都可以混用，不过习惯上模板函数`typename`，模板类`class`
