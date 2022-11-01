@@ -96,9 +96,9 @@ The header file (**MyClass.h**) holds the function declarations (prototypes) and
 ```CPP
 #ifndef MYCLASS H
 #define MYCLASS H
-class MyClass
+class MyClass{
 public:
-    MyClass():
+    MyClass();
 };
 #endif I1 MYCLASS H
 ```
