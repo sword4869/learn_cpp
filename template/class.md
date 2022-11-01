@@ -14,21 +14,29 @@ class MyClass {
 public:
     T first;
     MyClass(T x):first(x){}
-    void printInfo();
+    void print1();
+    void print2(T y);
 };
 
 template <class T>
-void MyClass<T>::printInfo(){
+void MyClass<T>::print1(){
     cout << first << endl;
+}
+
+template <class T>
+void MyClass<T>::print2(T y){
+    cout << y << endl;
 }
 
 int main() {
     MyClass<int> m(10);
-    m.printInfo();
+    m.print1();
+    m.print2("str");
     MyClass<string> n("hello");
-    n.printInfo();
+    n.print1();
 }
 ```
+模板类中的函数的语法，就是函数模板的语法多了个`MyClass<T>::`.
 
 # 2. Specialization
 
