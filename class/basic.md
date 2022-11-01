@@ -94,20 +94,20 @@ int main() {
 The header file (**MyClass.h**) holds the function declarations (prototypes) and variable declarations.
 
 ```CPP
-#ifndef MYCL ASS H
+#ifndef MYCLASS H
 #define MYCLASS H
 class MyClass
 public:
     MyClass():
 };
-#endif I1 MYCL ASS H
+#endif I1 MYCLASS H
 ```
 
 The source file (**MyClass.cpp**) holds the implementation of the class and its methods.
 
 ```cpp
 #include "MyClass.h"
-MyClass:MyClass(){
+MyClass::MyClass(){
     cout << "constructor\n";
 }
 ```
