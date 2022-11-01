@@ -75,3 +75,20 @@ int main() {
     MyClass<string> p("hello");
 }
 ```
+# 代码分离
+如果需要代码分离，即 template class 的声明、定义，以及 main 函数分属不同文件。例如：
+```
+src_dir
+|____MyStack.h
+|____MyStack.cpp
+|____main.cpp
+```
+则 main.cpp 文件中需要同时包含 .h 文件和 .cpp 文件，不然会出现链接错误。
+```cpp
+// main.cpp
+#include "MyStack.h"
+#include "MyStack.cpp"
+
+// 其他include
+// main函数主体 
+```
