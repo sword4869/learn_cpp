@@ -31,7 +31,8 @@ void MyClass<T>::print2(T y){
 int main() {
     MyClass<int> m(10);
     m.print1();
-    m.print2("str");
+    // m.print2("str"); 只能写同样的T
+    m.print2(100);
     MyClass<string> n("hello");
     n.print1();
 }
