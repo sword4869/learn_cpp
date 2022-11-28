@@ -33,8 +33,9 @@ If no access specifier is used when inheriting classes, the type becomes `privat
 
 3 types of inheritance:
 
+- 均无法继承private成员.
 - `public` Inheritance:
-  public -> public, protected -> proteced, private invisible.
+  public -> public, protected -> proteced
   But private members can be accessed through calls to the public and protected functions of the base class.
 - `protected` Inheritance:
   public, protected -> protected
@@ -47,6 +48,11 @@ When inheriting classes, the base class' constructor and destructor are not inhe
 
 1. base class's constructor -> derived class's constructor
 2. derived class's destructor -> base class's destructor
+
+
+[虚析构](./%E8%99%9A%E5%87%BD%E6%95%B0.md)
+
+
 
 # 3. mutltiple inheritance
 

@@ -1,3 +1,5 @@
+- [Operators](#operators)
+- [Rule](#rule)
 # Operators
 
 This chart shows the operators that can be overloaded.
