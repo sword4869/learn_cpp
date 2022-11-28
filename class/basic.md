@@ -5,6 +5,7 @@
 - [3. header, source and main](#3-header-source-and-main)
   - [3.1. Scope Resolution Operator](#31-scope-resolution-operator)
   - [3.2. directive](#32-directive)
+- [hh](#hh)
 
 
 # 1. constructor and destructor
@@ -133,3 +134,8 @@ The double colon(`::`) in the source file (.cpp) is called the scope resolution 
 - `endif` ends the condition.
 
 This prevents a header file from being included more than once within one file.
+
+
+# hh
+
+成员函数分为静态成员函数和非静态成员函数. ""
