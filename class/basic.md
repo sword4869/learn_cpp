@@ -6,6 +6,7 @@
   - [3.1. Scope Resolution Operator](#31-scope-resolution-operator)
   - [3.2. directive](#32-directive)
 - [hh](#hh)
+- [](#)
 
 
 # 1. constructor and destructor
@@ -138,4 +139,46 @@ This prevents a header file from being included more than once within one file.
 
 # hh
 
-成员函数分为静态成员函数和非静态成员函数. ""
+成员函数分为静态成员函数和非静态成员函数. "成员函数都有this指针是错的"。
+
+
+```cpp
+class String{
+    String(const char *str = NULL);
+};
+String::String(const char *str = NULL) {} // 这里写赋值是错误的
+String::String(const char *str) {} // 对
+```
+
+# 
+```cpp
+
+class String 
+{
+    public:
+        String(const char* str = NULL); // 通用构造函数
+        String(const String& another) ; // 拷贝构造函数
+    private:
+        char* m_data; // 用于保存字符串首地址
+};
+
+String::String(const String& another)
+{
+    if (another.m_data)
+    {
+        int nLength = strlen(another.m_data);
+        this->m_data = new char[nLength + 1];
+        memcpy(this->m_data, another.m_data, nLength);
+        this->m_data[nLength] = '\0';
+    }
+    else
+    {
+        this->m_data = new char[1];
+        this->m_data[0] = '\0';
+    }
+    cout << m_data << endl;
+}
+```
+注意到拷贝构造函数，可以调用私有变量。另外，操作符重载也行。那么规则是什么呢？
+
+规则就是在这些成员函数的函数体内的操作都算是类内。
