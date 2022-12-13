@@ -5,7 +5,7 @@
 
 This chart shows the operators that can be overloaded.
 
-![1659958431415](../image/1659958431415.png)
+![1659958431415](../../images/1659958431415.png)
 
 4 operators cannot be overloaded:
 

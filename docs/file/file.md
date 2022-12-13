@@ -52,7 +52,7 @@ ofstream MyFile("test.txt");
 
 ## file opening modes
 
-![1660032800901](../image/1660032800901.png)
+![1660032800901](../../images/1660032800901.png)
 
 ```cpp
 MyFile.open("file.txt", ios::out | ios:: trunc)
